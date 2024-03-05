@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search Pokémon" (input)="search()">
+
+{{this.totalRecords}}
+
+<div *ngIf="pokemons.length">
+    <ul>
+      <li *ngFor="let pokemon of filteredPokemons">
+        <a [routerLink]="['/pokemon-list/detail', getPokemonId(pokemon.url)]">   {{ pokemon.name }} </a>
+     </li>
+    </ul>
+    <h5>Count:  {{pokemons.length}}</h5>
+    <p-paginator [rows]="rows" [totalRecords]="totalRecords" (onPageChange)="paginate($event)"></p-paginator>
+  </div>
+
+ 
