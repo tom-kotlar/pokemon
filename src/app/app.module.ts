@@ -19,6 +19,7 @@ import { PrimeNgModule } from './primeng.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    PrimeNgModule
    
   ],
   providers: [],
